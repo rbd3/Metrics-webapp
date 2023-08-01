@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import metricSlice from './metricSlice';
+import metricsSlice from './metricSlice';
 
 export const store = configureStore({
   reducer: {
-    movies: metricSlice,
+    metrics: metricsSlice,
   },
 });
 
