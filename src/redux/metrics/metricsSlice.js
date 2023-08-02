@@ -34,7 +34,7 @@ const metricsSlice = createSlice({
         state.isLoading = false;
         state.error = action.error.message;
       });
- },
+  },
 });
 
 export default metricsSlice.reducer;

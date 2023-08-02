@@ -31,8 +31,7 @@ const UserList = () => {
       </div>
     );
   }
-
-  // Add a check for the existence of the users array
+  
   if (!users || users.length === 0) {
     return <div>No users found.</div>;
   }
