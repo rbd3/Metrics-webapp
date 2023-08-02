@@ -18,7 +18,7 @@ function Home() {
       <div className="movies-container">
         <div className="movies-grid">
           {movies.map((movie) => (
-            <div key={movie.id} className="movie-item">
+            <div key={movie.id} className="movie-item" >
               <h3 className="movie-name">{movie.name}</h3>
               <h3 className="movie-rating">{movie.rating.average}</h3>
             </div>
