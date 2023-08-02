@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import metricsReducer from './metrics/metricsSlice';
+import moviesSlice from './movies/movieSlice';
 
 export const store = configureStore({
   reducer: {
-    users: metricsReducer,
+    movies: moviesSlice,
   },
 });
 

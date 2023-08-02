@@ -1,3 +1,14 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(204, 198, 198);
+}
+
+.main-container.dark {
+  background-color: rgb(46, 44, 44);
 }
