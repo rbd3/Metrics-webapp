@@ -24,7 +24,9 @@ const UserList = () => {
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div>
+        Error: {error}
+        </div>;
   }
 
   // Add a check for the existence of the users array

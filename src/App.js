@@ -3,7 +3,7 @@ import UserList from './components/Movie';
 
 function App() {
   return (
-    <UserList />    
+    <UserList />
   );
 }
 
