@@ -31,7 +31,7 @@ const UserList = () => {
       </div>
     );
   }
-  
+
   if (!users || users.length === 0) {
     return <div>No users found.</div>;
   }
