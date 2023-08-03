@@ -11,10 +11,10 @@ const NavBar = () => (
       </div>
       <div className="container">
         <ul>
-          <li>
+          <li data-testid="microphone-icon">
             <FaMicrophone />
           </li>
-          <li>
+          <li data-testid="sun-icon">
             <FaSun />
           </li>
         </ul>
