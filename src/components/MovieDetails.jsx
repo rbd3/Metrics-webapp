@@ -30,7 +30,7 @@ function MovieDetails() {
       </Link>
       <div className="details-container">
         <div className="headings">
-          <h2>{name}</h2>
+          <h2 className="name-details">{name}</h2>
           <div className="rating">
             <h3>
               Rating:

@@ -6,7 +6,7 @@ const NavBar = () => (
   <>
     <header className="header">
       <div className="logo">
-        <img src="\assets\movie.jpg" alt="logo" />
+        <img src="\assets\cinema.jpg" alt="logo" />
         <h1>Movie App</h1>
       </div>
       <div className="container">

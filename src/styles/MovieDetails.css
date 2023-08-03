@@ -38,6 +38,16 @@
   align-items: center;
 }
 
+.name-details {
+  color: white;
+  font-size: 3rem;
+}
+
+.rating {
+  color: white;
+  font-size: 2rem;
+}
+
 .movie-main {
   display: flex;
   flex-direction: row;
@@ -49,36 +59,25 @@
   flex-direction: column;
   align-items: flex-start;
   margin-left: 3%;
+  font-size: 2rem;
 }
 
 .summary {
-  color: rgb(14, 11, 11);
-  font-size: 1.3rem;
+  color: white;
   font-weight: bold;
   margin-bottom: 2%;
 }
 
-.movie-categories {
-  display: flex;
-  flex-direction: row;
-}
-
-.movie-categories span {
-  margin-right: 20px;
-}
-
 .season {
-  color: rgb(14, 11, 11);
-  font-size: 1.4rem;
+  color: white;
   font-weight: bold;
   margin-bottom: 1%;
 }
 
 .type {
-  font-size: 1.4rem;
   font-weight: bold;
   text-decoration: none;
-  color: rgb(14, 11, 11);
+  color: white;
 }
 
 @media screen and (max-width: 768px) {

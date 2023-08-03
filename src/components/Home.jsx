@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import '../styles/Home.css';
 import { useDispatch, useSelector } from 'react-redux';
 import Movie from './Movie';
-import { fetchAllMovies } from '../redux/movies/movieSlice'; // Update the path accordingly
+import { fetchAllMovies } from '../redux/movies/movieSlice';
 
 function Home() {
   const dispatch = useDispatch();
@@ -19,7 +19,7 @@ function Home() {
   return (
     <>
       <div className="movies">
-        <h1>Movies List</h1>
+        <h1>MOVIES LIST</h1>
       </div>
       <div className="movies-container">
         <div className="movies-grid">
