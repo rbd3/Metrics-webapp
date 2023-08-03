@@ -8,7 +8,7 @@
 .back-button {
   text-decoration: none;
   padding: 1rem 2rem;
-  color: black;
+  color: rgb(31, 30, 30);
   font-size: 2rem;
   font-weight: bold;
   border-radius: 1rem;
@@ -83,12 +83,6 @@
 @media screen and (max-width: 768px) {
   .movie-main {
     flex-direction: column;
-  }
-
-  .movie-categories {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
   }
 
   .back-button {
