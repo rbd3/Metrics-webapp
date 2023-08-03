@@ -1,0 +1,91 @@
+.movie-details {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(243, 204, 211);
+}
+
+.back-button {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  color: rgb(31, 30, 30);
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  box-shadow: 1px 5px 5px #533333;
+  background-color: rgb(247, 157, 172);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  max-width: 10%;
+  align-items: center;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  margin: 5px auto;
+  background-color: #f194b8;
+  box-shadow: 1px 5px 5px #533333;
+  color: rgb(20, 19, 19);
+}
+
+.headings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name-details {
+  color: white;
+  font-size: 3rem;
+}
+
+.rating {
+  color: white;
+  font-size: 2rem;
+}
+
+.movie-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.summary-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 3%;
+  font-size: 2rem;
+}
+
+.summary {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+
+.season {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.type {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .movie-main {
+    flex-direction: column;
+  }
+
+  .back-button {
+    max-width: 30%;
+  }
+}
