@@ -1,10 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'https://api.tvmaze.com/shows/1/episodes';
+const url = 'https://api.tvmaze.com/show';
 
 const initialState = {
   Movies: [],
+  categories: [],
   isLoading: true,
   error: '',
 };
@@ -37,7 +38,15 @@ const movieSlice = createSlice({
           image: movie.image,
           rating: movie.rating,
           type: movie.type,
+          category: movie.genres,
         }));
+        const genresSet = new Set();
+        action.payload.forEach((movie) => {
+          movie.genres.forEach((genre) => {
+            genresSet.add(genre);
+          });
+        });
+        state.categories = Array.from(genresSet);
       })
       .addCase(fetchAllMovies.rejected, (state) => {
         state.isLoading = false;
