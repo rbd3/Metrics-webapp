@@ -74,6 +74,7 @@ This application, known as the **Movie App**, is developed as part of the Microv
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
+- [Live Demo](https://tv-show-metrics.onrender.com)
 - [Video Walkthrough](https://www.loom.com/share/3f2e5cf1460e460c9a15ecd81cca62a0?sid=343f1613-2e7b-4dfa-9257-d551870ad19e)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
