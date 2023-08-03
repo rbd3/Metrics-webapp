@@ -42,9 +42,8 @@ describe('Home', () => {
     render(
       <Provider store={store}>
         <BrowserRouter>
-        <Home />
+          <Home />
         </BrowserRouter>
-        
       </Provider>,
     );
 
