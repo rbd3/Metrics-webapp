@@ -38,15 +38,16 @@
 .filter span {
   font-size: 20px;
   font-weight: bold;
+  color: white;
 }
 
 .filter select {
   padding: 5px 10px;
   margin-right: 15px;
   outline: none;
-  border: 2px solid #000;
+  border: 2px solid #c6baba;
   border-radius: 3px;
-  color: var(--light-mode-text);
+  color: rgb(220, 90, 114);
 }
 
 @media screen and (max-width: 768px) {

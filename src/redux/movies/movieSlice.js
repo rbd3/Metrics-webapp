@@ -33,7 +33,7 @@ const movieSlice = createSlice({
         state.Movies = action.payload.map((movie) => ({
           id: movie.id,
           name: movie.name,
-          season: movie.season,
+          language: movie.language,
           summary: movie.summary,
           image: movie.image,
           rating: movie.rating,
