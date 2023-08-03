@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'https://api.tvmaze.com/shows/1/episodes'; // Update this URL with the appropriate API for movies
+const url = 'https://api.tvmaze.com/shows/1/episodes';
 
 const initialState = {
   Movies: [],
