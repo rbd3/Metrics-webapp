@@ -16,7 +16,6 @@ describe('NavBar', () => {
     expect(getByText('Movie App').tagName).toBe('H1');
     expect(getByAltText('logo')).toHaveAttribute('src', '\\assets\\cinema.jpg');
 
-    // Check for icons
     expect(getByTestId('microphone-icon')).toBeInTheDocument();
     expect(getByTestId('sun-icon')).toBeInTheDocument();
   });
