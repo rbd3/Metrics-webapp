@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect'; // For custom Jest matchers like toHaveTextContent
+import '@testing-library/jest-dom/extend-expect';
 import NavBar from '../components/NavBar';
 
 describe('NavBar', () => {
