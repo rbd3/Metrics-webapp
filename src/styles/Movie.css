@@ -48,6 +48,12 @@
     background-color: #f56ea2;
   }
 
+. movie-item {
+grid-row-gap: 0.8%;
+
+grid-culumn-gap: 0.5%;
+}
+
   .movie-item:nth-child(4n+2),
   .movie-item:nth-child(4n+3) {
     background-color: #fc5193;
