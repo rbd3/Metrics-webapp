@@ -19,17 +19,30 @@ const fetchSeasons = async (showId) => {
   }
 };
 
+
+const fetchEpisodes = async (showId) => {
+  try {
+    const response = await axios.get(`${baseURL}/${showId}/episodes`);
+    return response.data.length; // number of episodes
+  } catch (error) {
+    return 0; // default to 0 if there's an error
+  }
+};
+
+const fetchSeasonsAndEpisodes = async (shows) => {
+  return await Promise.all(shows.map(async (show) => {
+    const seasonsCount = await fetchSeasons(show.id);
+    const episodesCount = await fetchEpisodes(show.id);
+    return { ...show, seasons: seasonsCount, episodes: episodesCount };
+  }));
+};
+
 export const fetchAllMovies = createAsyncThunk('getmovies/', async () => {
   try {
     const response = await axios.get(baseURL);
     const shows = response.data;
-
-    const showsWithSeasons = await Promise.all(shows.map(async (show) => {
-      const seasonsCount = await fetchSeasons(show.id);
-      return { ...show, seasons: seasonsCount };
-    }));
-
-    return showsWithSeasons;
+    const showsWithSeasonsAndEpisodes = await fetchSeasonsAndEpisodes(shows);
+    return showsWithSeasonsAndEpisodes;
   } catch (error) {
     throw Error('Failed to fetch movies');
   }
@@ -56,6 +69,7 @@ const movieSlice = createSlice({
           type: movie.type,
           category: movie.genres,
           seasons: movie.seasons,
+          episodes: movie.episodes,
         }));
         const genresSet = new Set();
         action.payload.forEach((movie) => {
