@@ -8,7 +8,7 @@
   box-shadow: 5px 5px 10px 0 #dfd5d5;
   padding-right: 10px;
   padding: 2%;
-  margin: 2%; 
+  margin: 5%; 
 }
 
 .movie-item:nth-child(even) {
