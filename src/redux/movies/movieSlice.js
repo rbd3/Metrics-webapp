@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'https://api.tvmaze.com/show';
+const baseURL = 'https://api.tvmaze.com/shows';
 
 const initialState = {
   Movies: [],
@@ -10,10 +10,26 @@ const initialState = {
   error: '',
 };
 
+const fetchSeasons = async (showId) => {
+  try {
+    const response = await axios.get(`${baseURL}/${showId}/seasons`);
+    return response.data.length; // number of seasons
+  } catch (error) {
+    return 0; // default to 0 if there's an error
+  }
+};
+
 export const fetchAllMovies = createAsyncThunk('getmovies/', async () => {
   try {
-    const response = await axios.get(url);
-    return response.data;
+    const response = await axios.get(baseURL);
+    const shows = response.data;
+
+    const showsWithSeasons = await Promise.all(shows.map(async (show) => {
+      const seasonsCount = await fetchSeasons(show.id);
+      return { ...show, seasons: seasonsCount };
+    }));
+
+    return showsWithSeasons;
   } catch (error) {
     throw Error('Failed to fetch movies');
   }
@@ -39,6 +55,7 @@ const movieSlice = createSlice({
           rating: movie.rating,
           type: movie.type,
           category: movie.genres,
+          seasons: movie.seasons,
         }));
         const genresSet = new Set();
         action.payload.forEach((movie) => {
