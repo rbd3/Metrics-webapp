@@ -50,7 +50,7 @@ function MovieDetails() {
             <p className="type">
               Category :
               { ' ' }
-              {category}
+              {category.join(', ')}
             </p>
           </div>
         </div>
