@@ -14,7 +14,7 @@ function MovieDetails() {
   }
 
   const {
-    name, rating, summary, image, language, type,
+    name, rating, summary, image, language, type,category,
   } = movie;
   const Summary = summary
     .replace(/<p>/g, '')
@@ -48,9 +48,9 @@ function MovieDetails() {
               {language}
             </p>
             <p className="type">
-              Type :
+            Category :
               { ' ' }
-              {type}
+              {category}
             </p>
           </div>
         </div>
