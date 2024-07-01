@@ -29,13 +29,11 @@ const fetchEpisodes = async (showId) => {
 };
 
 const fetchSeasonsAndEpisodes = async (shows) =>
-  Promise.all(
-    shows.map(async (show) => {
-      const seasonsCount = await fetchSeasons(show.id);
-      const episodesCount = await fetchEpisodes(show.id);
-      return { ...show, seasons: seasonsCount, episodes: episodesCount };
-    })
-  );
+  Promise.all(shows.map(async (show) => {
+    const seasonsCount = await fetchSeasons(show.id);
+    const episodesCount = await fetchEpisodes(show.id);
+    return { ...show, seasons: seasonsCount, episodes: episodesCount };
+  }));
 
 export const fetchAllMovies = createAsyncThunk('getmovies/', async () => {
   try {
