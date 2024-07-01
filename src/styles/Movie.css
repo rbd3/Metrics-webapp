@@ -7,8 +7,8 @@
   text-decoration: none;
   box-shadow: 5px 5px 10px 0 #dfd5d5;
   padding-right: 10px;
-  grid-row-gap: 2%;
-  grid-column-gap: 1%;
+  padding: 2%;
+  margin: 2%; 
 }
 
 .movie-item:nth-child(even) {
