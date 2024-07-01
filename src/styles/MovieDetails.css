@@ -68,7 +68,7 @@
   margin-bottom: 2%;
 }
 
-.season {
+.season, .language, .episodes {
   color: white;
   font-weight: bold;
   margin-bottom: 1%;

@@ -14,7 +14,7 @@ function MovieDetails() {
   }
 
   const {
-    name, rating, summary, image, language, category, seasons,
+    name, rating, summary, image, language, category, seasons, episodes,
   } = movie;
   const Summary = summary
     .replace(/<p>/g, '')
@@ -46,6 +46,11 @@ function MovieDetails() {
               Seasons:
               {' '}
               {seasons}
+            </p>
+            <p className="episodes">
+              Episodes:
+              {' '}
+              {episodes}
             </p>
             <p className="language">
               Language:
