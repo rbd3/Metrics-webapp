@@ -7,7 +7,8 @@
   text-decoration: none;
   box-shadow: 5px 5px 10px 0 #dfd5d5;
   padding-right: 10px;
-  grid-row-gap: 0.3%;
+  grid-row-gap: 2%;
+  grid-column-gap: 1%;
 }
 
 .movie-item:nth-child(even) {
@@ -47,12 +48,6 @@
   .movie-item:nth-child(4n+4) {
     background-color: #f56ea2;
   }
-
-. movie-item {
-grid-row-gap: 0.8%;
-
-grid-culumn-gap: 0.5%;
-}
 
   .movie-item:nth-child(4n+2),
   .movie-item:nth-child(4n+3) {
