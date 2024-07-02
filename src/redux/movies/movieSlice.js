@@ -24,16 +24,18 @@ const fetchEpisodes = async (showId) => {
     const response = await axios.get(`${baseURL}/${showId}/episodes`);
     return response.data.length; // number of episodes
   } catch (error) {
-    return 0;
+    return 0; // default to 0 if there's an error
   }
 };
 
-const fetchSeasonsAndEpisodes = async (shows) =>
-  Promise.all(shows.map(async (show) => {
-    const seasonsCount = await fetchSeasons(show.id);
-    const episodesCount = await fetchEpisodes(show.id);
-    return { ...show, seasons: seasonsCount, episodes: episodesCount };
-  }));
+const fetchSeasonsAndEpisodes = async (shows) => 
+  Promise.all(
+    shows.map(async (show) => {
+      const seasonsCount = await fetchSeasons(show.id);
+      const episodesCount = await fetchEpisodes(show.id);
+      return { ...show, seasons: seasonsCount, episodes: episodesCount };
+    })
+  );
 
 export const fetchAllMovies = createAsyncThunk('getmovies/', async () => {
   try {
