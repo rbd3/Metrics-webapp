@@ -24,7 +24,7 @@ const fetchEpisodes = async (showId) => {
     const response = await axios.get(`${baseURL}/${showId}/episodes`);
     return response.data.length; // number of episodes
   } catch (error) {
-    return 0; // default to 0 if there's an error
+    return 0;
   }
 };
 
