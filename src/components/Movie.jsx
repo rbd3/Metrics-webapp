@@ -1,4 +1,4 @@
-//import '../styles/Movie.css';
+import '../styles/Movie.css'; // style for show movie
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
