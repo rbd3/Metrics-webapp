@@ -34,7 +34,7 @@ const fetchSeasonsAndEpisodes = async (shows) =>
       const seasonsCount = await fetchSeasons(show.id);
       const episodesCount = await fetchEpisodes(show.id);
       return { ...show, seasons: seasonsCount, episodes: episodesCount };
-    })
+    }),
   );
 
 export const fetchAllMovies = createAsyncThunk('getmovies/', async () => {
