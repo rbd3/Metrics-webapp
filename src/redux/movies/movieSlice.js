@@ -19,11 +19,10 @@ const fetchSeasons = async (showId) => {
   }
 };
 
-const fetchSeasonsForShows = async (shows) => 
-  Promise.all(
-    shows.map(async (show) => {
-      const seasonsCount = await fetchSeasons(show.id);
-      return { ...show, seasons: seasonsCount };
+const fetchSeasonsForShows = async (shows) =>
+  Promise.all(shows.map(async (show) => {
+    const seasonsCount = await fetchSeasons(show.id);
+    return { ...show, seasons: seasonsCount };
     }),
   );
 
