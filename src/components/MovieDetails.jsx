@@ -14,7 +14,7 @@ function MovieDetails() {
   }
 
   const {
-    name, rating, summary, image, language, category, seasons, episodes,
+    name, rating, summary, image, language, category, seasons,
   } = movie;
   const Summary = summary
     .replace(/<p>/g, '')
