@@ -19,19 +19,16 @@ const fetchSeasons = async (showId) => {
   }
 };
 
-const fetchSeasonsForShows = async (shows) => {
-  for (let show of shows) {
-    const seasonsCount = await fetchSeasons(show.id);
-    show.seasons = seasonsCount;
-  }
-  return shows;
-};
-
 export const fetchAllMovies = createAsyncThunk('getmovies/', async () => {
   try {
     const response = await axios.get(baseURL);
     const shows = response.data;
-    const showsWithSeasons = await fetchSeasonsForShows(shows);
+
+    const showsWithSeasons = await Promise.all(shows.map(async (show) => {
+      const seasonsCount = await fetchSeasons(show.id);
+      return { ...show, seasons: seasonsCount };
+    }));
+
     return showsWithSeasons;
   } catch (error) {
     throw Error('Failed to fetch movies');
