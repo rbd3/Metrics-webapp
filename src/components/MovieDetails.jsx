@@ -47,11 +47,6 @@ function MovieDetails() {
               {' '}
               {seasons}
             </p>
-            <p className="episodes">
-              Episodes:
-              {' '}
-              {episodes}
-            </p>
             <p className="language">
               Language:
               {' '}
